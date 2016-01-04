@@ -4,7 +4,7 @@ $(document).ready(function () {
 });
 $.ajax({
     type: "GET",
-    url: "ArtigoNegocios.xml",
+    url: "https://cdn.rawgit.com/dicronius/js/master/xml.xml",
     dataType: "xml",
     success: function (xml) {}
 });
