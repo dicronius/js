@@ -8,8 +8,8 @@ $.ajax({
     dataType: "xml",
     success: function (xml) {
         
-    $(xml).find('cofinaeditor/Articles').each(function () {
-    var Titles = $(this).find('Title').text();
+    $(xml).find("cofinaeditor/Articles").each(function () {
+    var Titles = $(this).find("Title").text();
     $("<li></li>").html(Titles).appendTo("#titulos ul");
      
     });
