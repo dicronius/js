@@ -10,12 +10,10 @@ $.ajax({
     success: function (xml) {
         
         $(xml).find("Articles").each(function () {
-            var Titles = $("title").text();           
-            ////////////////////////////////
-
+            
             var socket = io();
 
-            socket.emit('chat message', $(Titles).val());
+            socket.emit('chat message', $("title").val());
             return false;
 
 
