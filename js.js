@@ -18,7 +18,7 @@ $.ajax({
 
 
             socket.on('chat message', function (msg) {
-                $('#titulos').append($('<li>').text(msg));
+                $('#titulos').append($('<li>').text($("title").val()));
             });
 
         });
