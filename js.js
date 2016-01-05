@@ -8,7 +8,7 @@ $.ajax({
     dataType: "xml",
     success: function (xml) {
         
-    $(xml).find("Article").each(function () {
+    $(xml).find("Articles").each(function () {
     var Titles = $("title").text();
     $("<li></li>").html(Titles).appendTo("#titulos ul");
      
