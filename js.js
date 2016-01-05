@@ -13,7 +13,6 @@ $.ajax({
             var Titles = $("title").text();           
             ////////////////////////////////
 
-            var socket = io.connect(__dirname);
             socket.on('message', function (Titles) {
                 console.log(Titles);
                 socket.send( "<span>" + Titles + "</span><br />");
