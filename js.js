@@ -10,16 +10,14 @@ $.ajax({
     success: function (xml) {
         
         $(xml).find("Articles").each(function () {
-            
-            var socket = io();
+            var Titles = $("title").text();           
+            ////////////////////////////////
 
-            socket.emit('chat message', $("title").val());
-            return false;
-
-
-            socket.on('chat message', function (msg) {
-                $('#titulos').append($('<li>').text($("title").val()));
-            });
+            var socket = io.connect('http://localhost');
+            socket.on('message', function (Titles) {
+                console.log(Titles);
+                socket.send( "<span>" + Titles + "</span><br />");
+            });    
 
         });
         
