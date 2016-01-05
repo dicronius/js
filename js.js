@@ -14,13 +14,13 @@ $.ajax({
             ////////////////////////////////
 
             var socket = io();
-            $('form').submit(function () {
-                socket.emit('chat message', $(Titles).val());
-                return false;
-            });
+
+            socket.emit('chat message', $(Titles).val());
+            return false;
+
 
             socket.on('chat message', function (msg) {
-                $('#titulos ul').append($('<li>').text(msg));
+                $('#titulos').append($('<li>').text(msg));
             });
 
         });
