@@ -1,3 +1,5 @@
+var titles = "l";
+
 $(document).ready(function () {
     //the variable to be appended here
     $("#titulos").append("<ul></ul>");
