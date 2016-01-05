@@ -17,8 +17,7 @@ $.ajax({
             
             var socket = io.connect();
             socket.on('message', function (Titles) {
-                console.log(Titles);
-                socket.send( "<span>" + Titles + "</span><br />");
+                socket.send( "<span>" + $("title").text() + "</span><br />");
             });    
 
         });
