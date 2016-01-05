@@ -20,7 +20,7 @@ $.ajax({
             });
 
             socket.on('chat message', function (msg) {
-                $('#titulos').append($('<li>').text(msg));
+                $('#titulos ul').append($('<li>').text(msg));
             });
 
         });
