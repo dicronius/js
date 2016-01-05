@@ -9,7 +9,7 @@ $.ajax({
     success: function (xml) {
         
     $(xml).find("Articles").each(function () {
-    var Titles = $(this).find("Title":First-Child).text();
+    var Titles = $(this).find("Title").text();
     $("<li></li>").html(Titles).appendTo("#titulos ul");
      
     });
